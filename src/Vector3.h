@@ -102,6 +102,14 @@ public:
 		return sqrt(static_cast<double>(x * x + y * y + z * z));
 	}
 
+	inline double Distance(const Vector3<T>& a_Rhs)
+	{
+		double dx = (a_Rhs.x - x);
+		double dy = (a_Rhs.y - y);
+		double dz = (a_Rhs.z - z);
+		return sqrt(dx * dx + dy * dy + dz * dz);
+	}
+
 	inline double SqrLength(void) const
 	{
 		return x * x + y * y + z * z;
